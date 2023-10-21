@@ -129,7 +129,7 @@ def main():
 
     # Load font ##########################################################
     # https://opentype.jp/kouzanmouhitufont.htm
-    font_path = './utils/font/Hengshan calligraphy font.ttf'
+    font_path = './utils/font/Hengshan_calligraphy_font.ttf'
 
     # Label loading ###########################################################
     with open('setting/labels.csv', encoding='utf8') as f:  # print
