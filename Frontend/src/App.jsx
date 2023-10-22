@@ -5,6 +5,8 @@ import './components/firstimage.css'
 import S2 from './components/s2'
 import S3 from './components/s3'
 import S4 from './components/s4'
+import Footer from './components/footer'
+import TryMeButton from './components/trymebutton'
 
 
 
@@ -27,8 +29,18 @@ export default function App() {
       <div>
         <div className="mx-12 py-12">
           <S3 />
-          <S4 />
         </div>
+      </div>
+
+      <div className="third-image mx-4">
+        <div className="mx-12 py-12">
+          <S4 />
+
+        </div>
+      </div>
+
+      <div>
+        <Footer />
       </div>
 
 
