@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import Header from "./components/header"
 import S1 from './components/s1'
@@ -7,7 +6,7 @@ import S2 from './components/s2'
 import S3 from './components/s3'
 import S4 from './components/s4'
 import Footer from './components/footer'
-import TryMeButton from './components/trymebutton'
+
 
 
 
@@ -45,29 +44,6 @@ export default function App() {
       </div>
 
 
-=======
-import React,  { useState } from 'react'
-import Header from "./components/header"
-import S1 from './components/s1'
-import CameraFeed from './components/CameraFeed';
-
-export default function App() {
-
-  
-  const [showCamera, setShowCamera] = useState(false);
-  return (
-    
-
-    <div className=''>
-      <div className="m-12">
-        <Header />
-
-        <h1>Camera Feed</h1>
-        <S1 showCamera={showCamera} setShowCamera={setShowCamera} />
-        {showCamera && <CameraFeed />}
-      </div>
-
->>>>>>> origin/Final
 
 
     </div>

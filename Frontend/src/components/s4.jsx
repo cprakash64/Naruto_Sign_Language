@@ -1,11 +1,39 @@
 import example1 from '../images/example1.mp4';
-import React, { useState, useRef } from 'react';
-import TryMeButton from './trymebutton';
-
+import React, { useState, useRef, useEffect } from 'react';
+import Webcam from 'react-webcam';
+import io from 'socket.io-client';
 
 export default function S4() {
     const [isPlaying, setIsPlaying] = useState(false);
     const videoRef = useRef(null);
+    const [isCameraOn, setIsCameraOn] = useState(false);
+
+
+    
+    const [words, setWords] = useState([]);
+    
+    useEffect(() => {
+        fetch('http://localhost:5000/get-words')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);  // This should print your words
+            })
+            .catch(error => {
+                console.log("There was a problem with the fetch operation:", error.message);
+            });
+    }, []);
+
+    const videoConstraints = {
+        width: 1280, // Width of the video
+        height: 720, // Height of the video
+        facingMode: 'user', // Use the front-facing camera
+    };
+
 
     const togglePlay = () => {
         if (videoRef.current) {
@@ -72,10 +100,22 @@ export default function S4() {
                 <p className="text-center text-4xl font-bold mt-6 text-indigo-900">
                     Participate in Video Calls without Any Barriers Today!
                 </p>
-
-                <div className="flex items-center justify-center my-4">
-                    <TryMeButton />
+                <div className={`flex flex-col items-center justify-center ${isCameraOn ? "min-h-screen" : ""}`}> {/* Conditionally apply min-h-screen */}
+                    {isCameraOn ? <Webcam videoConstraints={videoConstraints} /> : null}
                 </div>
+                <div className="flex items-center justify-center my-4">
+                    <button 
+                        onClick={() => setIsCameraOn(!isCameraOn)} 
+                        className="flex items-center justify-center font-bold p-4 text-white bg-indigo-900 rounded-xl text-2xl"
+                    >
+                        {isCameraOn ? 'Turn Camera Off' : 'Turn Camera On'}
+                    </button>
+                </div>
+                <ul>
+                    {words.map((word, index) => (
+                        <li key={index}>{word}</li>
+                    ))}
+                </ul>
             </div>
 
 

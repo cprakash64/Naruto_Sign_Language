@@ -362,6 +362,8 @@ def draw_debug_image(
     if len(sign_display_queue) > 0:
         for sign_id in sign_display_queue:
             sign_display = sign_display + labels[sign_id][1]
+            print(sign_display)
+
 
     # Technique name display (designated time drawing)
     if lang_offset == 0:
