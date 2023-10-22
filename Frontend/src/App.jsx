@@ -4,6 +4,7 @@ import S1 from './components/s1'
 import './components/firstimage.css'
 import S2 from './components/s2'
 import S3 from './components/s3'
+import S4 from './components/s4'
 
 
 
@@ -26,8 +27,10 @@ export default function App() {
       <div>
         <div className="mx-12 py-12">
           <S3 />
+          <S4 />
         </div>
       </div>
+
 
 
 
