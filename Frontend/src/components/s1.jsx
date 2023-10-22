@@ -1,7 +1,14 @@
+
+
 export default function S1() {
     return (
-        <button className="font-bold p-4 text-white bg-indigo-900 rounded-xl">
-            Try Me
-        </button>
+        <div className="py-11 my-10">
+            <h1 className=" mt-6 font-bold max-w-xl py-3 px-6 leading-snug rounded-2xl text-5xl text-indigo-900">
+                Revolutionizing Video Calls for
+                People with
+                Sensory difficulties
+            </h1>
+        </div>
     )
+
 }
