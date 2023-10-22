@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <div className="grid grid-cols-3">
 
-            <Logo />
+            <Logo color1="text-indigo-900" color2="text-indigo-900" />
 
             <div className=" flex items-center font-extrabold justify-between px-12">
                 <a href="" className="text-indigo-900">How It Works</a>

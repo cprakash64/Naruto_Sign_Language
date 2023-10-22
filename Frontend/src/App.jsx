@@ -6,6 +6,7 @@ import S2 from './components/s2'
 import S3 from './components/s3'
 
 
+
 export default function App() {
   return (
     <div>
@@ -16,8 +17,10 @@ export default function App() {
         </div>
       </div>
 
-      <div className="mx-12 py-12">
-        <S2 />
+      <div className="second-image">
+        <div className="mx-12 py-12">
+          <S2 />
+        </div>
       </div>
 
       <div>
