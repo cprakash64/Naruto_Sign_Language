@@ -1,0 +1,37 @@
+.first-image {
+    background-image: url(../images/bgtest1d.png);
+    /* Replace 'background-image.jpg' with the actual image file path */
+    background-size: cover;
+    /* You can adjust the background size as needed */
+    background-repeat: no-repeat;
+    /* Prevent the background from repeating */
+    /* Add other background properties as needed */
+    background-position: center;
+}
+
+
+.second-image {
+    background-image: url(../images/bgtest2c.png);
+    /* Replace 'background-image.jpg' with the actual image file path */
+    background-size: cover;
+    /* You can adjust the background size as needed */
+    background-repeat: no-repeat;
+    /* Prevent the background from repeating */
+    /* Add other background properties as needed */
+    background-position: top;
+
+    border-radius: 0 8rem;
+}
+
+.third-image {
+    background-image: url(../images/bgtest2c.png);
+    /* Replace 'background-image.jpg' with the actual image file path */
+    background-size: cover;
+    /* You can adjust the background size as needed */
+    background-repeat: no-repeat;
+    /* Prevent the background from repeating */
+    /* Add other background properties as needed */
+    background-position: bottom;
+
+    border-radius: 8rem;
+}
